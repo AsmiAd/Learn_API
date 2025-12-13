@@ -22,22 +22,22 @@ class Mainscreen extends StatelessWidget {
           ),
 
           SizedBox(height: 20),
-          // ElevatedButton(
-          //   onPressed: () {
-          //     Navigator.pushNamed(context, '/profile2');
-          //   }, 
-          //   child: const Text('Go to Profile Screen 2'),
-          // ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/withModel');
+            }, 
+            child: const Text('API with Model Screen'),
+          ),
 
-          // SizedBox(height: 20),
-          // ElevatedButton(
-          //   onPressed: () {
-          //     Navigator.pushNamed(context, '/login');
-          //   }, 
-          //   child: const Text('Go to Login Screen'),
-          // ),
+          SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/withoutModel');
+            }, 
+            child: const Text('API without Model Screen'),
+          ),
 
-          // SizedBox(height: 20),
+          SizedBox(height: 20),
           // ElevatedButton(
           //   onPressed: () {
           //     Navigator.pushNamed(context, '/register');
