@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:learn_api/models/list_post_with_model.dart';
 import 'package:learn_api/models/single_post_with_model.dart';
 
 class ApiServices {
@@ -36,5 +37,22 @@ class ApiServices {
     }
     return null;
   }
+
+  // List of Posts With Model
+  Future<List<PostModel>?> getPostWithModel()async{
+
+    try{
+      var response = await http.get(Uri.parse("https://jsonplaceholder.typicode.com/posts"));
+      if(response.statusCode == 200){
+        List<PostModel> model = List<PostModel>.from(json.decode(response.body).map((x)=> PostModel.fromJson(x)));
+        return model;
+      }
+    }catch (e){
+      print(e.toString());
+    }
+    
+    return null;
+  }
+
 
 }

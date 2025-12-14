@@ -38,14 +38,14 @@ class Mainscreen extends StatelessWidget {
           ),
 
           SizedBox(height: 20),
-          // ElevatedButton(
-          //   onPressed: () {
-          //     Navigator.pushNamed(context, '/register');
-          //   }, 
-          //   child: const Text('Go to Registration Screen'),
-          // ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/listwithmodel');
+            }, 
+            child: const Text('API List with Model Screen'),
+          ),
 
-          // SizedBox(height: 20),
+          SizedBox(height: 20),
           // ElevatedButton(
           //   onPressed: () {
           //     Navigator.pushNamed(context, '/commerce');

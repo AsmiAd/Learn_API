@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learn_api/main_screen.dart';
 import 'package:learn_api/views/home_page.dart';
+import 'package:learn_api/views/screen_with_list_model.dart';
 import 'package:learn_api/views/screen_with_model.dart';
 import 'package:learn_api/views/screen_without_model.dart';
 
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         '/home': (context) => const HomePage(),
         '/withModel': (context) => const ScreenWithModel(),
         '/withoutModel': (context) => const ScreenWithoutModel (),
-        // '/register': (context) => const RegistrationScreen(),
+        '/listwithmodel': (context) => ScreenWithListModel(),
         // '/commerce': (context) => const HomeNavigation(),
         // '/counter': (context) => const CounterApp(),
         // '/counterriverpod': (context) => CounterAppRiverpod(),
