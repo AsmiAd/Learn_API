@@ -55,4 +55,22 @@ class ApiServices {
   }
 
 
+  // List of Posts WithOut Model
+  Future<dynamic> getPostWithOutModel()async{
+
+    try{
+      var response = await http.get(Uri.parse("https://jsonplaceholder.typicode.com/posts"));
+      if(response.statusCode == 200){
+        final model = jsonDecode(response.body);
+        return model;
+      }
+
+    }catch (e){
+      print(e.toString());
+    }
+
+    return null;
+  }
+
+
 }

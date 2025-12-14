@@ -3,6 +3,7 @@ import 'package:learn_api/main_screen.dart';
 import 'package:learn_api/views/home_page.dart';
 import 'package:learn_api/views/screen_with_list_model.dart';
 import 'package:learn_api/views/screen_with_model.dart';
+import 'package:learn_api/views/screen_without_list_model.dart';
 import 'package:learn_api/views/screen_without_model.dart';
 
 void main() {
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         '/withModel': (context) => const ScreenWithModel(),
         '/withoutModel': (context) => const ScreenWithoutModel (),
         '/listwithmodel': (context) => ScreenWithListModel(),
-        // '/commerce': (context) => const HomeNavigation(),
+        'listwithoutmodel': (context) => const ScreenWithoutListModel(),
         // '/counter': (context) => const CounterApp(),
         // '/counterriverpod': (context) => CounterAppRiverpod(),
         // '/toggle': (context) => ThemeToggleApp()
