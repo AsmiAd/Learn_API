@@ -90,5 +90,22 @@ class ApiServices {
   }
 
 
+  //Multi Without Model
+  Future<dynamic>  getMultiDataWithOutModel() async{
+
+    try{
+      var response =  await http.get(Uri.parse("https://reqres.in/api/unknown"));
+      if(response.statusCode == 200){
+        final model = jsonDecode(response.body);
+        return model;
+      }
+    }catch (e){
+      print(e);
+    }
+    return null;
+  }
+
+
+
 
 }

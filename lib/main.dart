@@ -6,6 +6,7 @@ import 'package:learn_api/views/screen_with_model.dart';
 import 'package:learn_api/views/screen_with_multi_model.dart';
 import 'package:learn_api/views/screen_without_list_model.dart';
 import 'package:learn_api/views/screen_without_model.dart';
+import 'package:learn_api/views/screen_without_multi_model.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
         '/listwithmodel': (context) => ScreenWithListModel(),
         'listwithoutmodel': (context) => const ScreenWithoutListModel(),
         '/mulitiWithModel': (context) => const ScreenWithMultiModel(),
-        // '/counterriverpod': (context) => CounterAppRiverpod(),
+        '/mulitiWithoutModel': (context) => ScreenWithOutMultiModel(),
         // '/toggle': (context) => ThemeToggleApp()
 
       },
