@@ -5,6 +5,7 @@ import 'package:learn_api/models/create_job_model.dart';
 import 'package:learn_api/models/list_post_with_model.dart';
 import 'package:learn_api/models/login_model.dart';
 import 'package:learn_api/models/multi_data_model.dart';
+import 'package:learn_api/models/register_model.dart';
 import 'package:learn_api/models/single_post_with_model.dart';
 
 class ApiServices {
@@ -179,6 +180,33 @@ class ApiServices {
     return null;
     
   }
+
+
+  // Register User
+  Future<RegisterModel?> register(String email, String password) async{
+
+    try{
+      var url = Uri.parse("https://reqres.in/api/register");
+
+      var response = await http.post(url, body: {
+        "email": email,
+        "password": password
+      });
+
+      if(response.statusCode == 200){
+        RegisterModel model = RegisterModel.fromJson(jsonDecode(response.body));
+        return model;
+      }
+      
+    }catch (e){
+      print(e);
+    }
+    return null;
+    
+    
+    
+  }
+  
 
 
 

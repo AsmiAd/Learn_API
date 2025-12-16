@@ -93,6 +93,14 @@ class Mainscreen extends StatelessWidget {
             child: const Text('Create Job'),
           ),
 
+          SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/registerScreen');
+            }, 
+            child: const Text('Register Screen'),
+          ),
+
         ],
       ),
     );
