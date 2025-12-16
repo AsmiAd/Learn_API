@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:learn_api/models/create_job_model.dart';
 import 'package:learn_api/models/list_post_with_model.dart';
 import 'package:learn_api/models/login_model.dart';
 import 'package:learn_api/models/multi_data_model.dart';
@@ -149,6 +150,37 @@ class ApiServices {
       print(e);
     }
   }
+
+
+  //Creat Job
+  Future<CreateJobModel?> createJob(String name, String job) async{
+    
+    
+    try{
+      
+      var url = Uri.parse("https://reqres.in/api/users");
+      
+      var response = await  http.post(url, body: {
+        "name": name,
+        "job": job
+      });
+
+      if(response.statusCode == 201 || response.statusCode == 200){
+
+        CreateJobModel model = CreateJobModel.fromJson(jsonDecode(response.body));
+        return model;
+
+      }
+
+
+    }catch (e){
+      print(e);
+    }
+    return null;
+    
+  }
+
+
 
 
 

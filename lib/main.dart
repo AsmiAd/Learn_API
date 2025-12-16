@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learn_api/main_screen.dart';
 import 'package:learn_api/views/home_page.dart';
+import 'package:learn_api/views/home_screen_create_job.dart';
 import 'package:learn_api/views/login_screen_with_model.dart';
 import 'package:learn_api/views/login_screen_without_model.dart';
 import 'package:learn_api/views/screen_with_list_model.dart';
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
         '/mulitiWithoutModel': (context) => ScreenWithOutMultiModel(),
         '/loginWithModel': (context) => LoginScreenWithModel(),
         '/loginWithoutModel': (context) => LoginScreenWithoutModel(),
-
+        '/createJobHomeScreen': (context) => HomeScreenCreateJob(),
       },
     );
   }
