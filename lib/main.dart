@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learn_api/main_screen.dart';
 import 'package:learn_api/views/home_page.dart';
+import 'package:learn_api/views/login_screen_with_model.dart';
 import 'package:learn_api/views/screen_with_list_model.dart';
 import 'package:learn_api/views/screen_with_model.dart';
 import 'package:learn_api/views/screen_with_multi_model.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         'listwithoutmodel': (context) => const ScreenWithoutListModel(),
         '/mulitiWithModel': (context) => const ScreenWithMultiModel(),
         '/mulitiWithoutModel': (context) => ScreenWithOutMultiModel(),
-        // '/toggle': (context) => ThemeToggleApp()
+        '/loginWithModel': (context) => LoginScreenWithModel()
 
       },
     );

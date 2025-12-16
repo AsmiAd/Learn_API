@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:learn_api/models/list_post_with_model.dart';
+import 'package:learn_api/models/login_model.dart';
 import 'package:learn_api/models/multi_data_model.dart';
 import 'package:learn_api/models/single_post_with_model.dart';
 
@@ -97,6 +98,28 @@ class ApiServices {
       var response =  await http.get(Uri.parse("https://reqres.in/api/unknown"));
       if(response.statusCode == 200){
         final model = jsonDecode(response.body);
+        return model;
+      }
+    }catch (e){
+      print(e);
+    }
+    return null;
+  }
+
+
+  // Login With Model
+  Future<LoginModel?> loginWithModel( String email, String password)async{
+    
+    try{
+      var url = Uri.parse("https://reqres.in/api/login");
+      var response = await http.post(url, body: {
+        "email": email,
+        "password": password
+      });
+
+
+      if(response.statusCode == 200){
+        LoginModel model = LoginModel.fromJson(jsonDecode(response.body));
         return model;
       }
     }catch (e){

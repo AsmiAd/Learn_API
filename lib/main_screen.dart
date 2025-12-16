@@ -70,12 +70,12 @@ class Mainscreen extends StatelessWidget {
           ),
 
           SizedBox(height: 20),
-          // ElevatedButton(
-          //   onPressed: () {
-          //     Navigator.pushNamed(context, '/toggle');
-          //   }, 
-          //   child: const Text('Go to Dark/Light Mode Screen'),
-          // ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/loginWithModel');
+            }, 
+            child: const Text('API Login with Model Screen'),
+          ),
 
         ],
       ),
