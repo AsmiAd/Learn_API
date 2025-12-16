@@ -54,14 +54,14 @@ class Mainscreen extends StatelessWidget {
           ),
 
           SizedBox(height: 20),
-          // ElevatedButton(
-          //   onPressed: () {
-          //     Navigator.pushNamed(context, '/counter');
-          //   }, 
-          //   child: const Text('Go to Counter Screen'),
-          // ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/mulitiWithModel');
+            }, 
+            child: const Text('API Multi Data with Model Screen'),
+          ),
 
-          // SizedBox(height: 20),
+          SizedBox(height: 20),
           // ElevatedButton(
           //   onPressed: () {
           //     Navigator.pushNamed(context, '/counterriverpod');

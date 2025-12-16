@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:learn_api/models/list_post_with_model.dart';
+import 'package:learn_api/models/multi_data_model.dart';
 import 'package:learn_api/models/single_post_with_model.dart';
 
 class ApiServices {
@@ -71,6 +72,23 @@ class ApiServices {
 
     return null;
   }
+
+  
+  //Multi With Model
+  Future<MultiData?>  getMultiDataWithModel() async{
+    
+    try{
+    var response =  await http.get(Uri.parse("https://reqres.in/api/unknown"));
+      if(response.statusCode == 200){
+        MultiData model = MultiData.fromJson(json.decode(response.body));
+        return model;
+      }
+    }catch (e){
+      print(e);
+    }
+    return null;
+  }
+
 
 
 }
