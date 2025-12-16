@@ -4,7 +4,7 @@ import 'package:learn_api/services/api_service.dart';
 
 
 class ScreenWithListModel extends StatefulWidget {
-  const ScreenWithListModel({Key? key}) : super(key: key);
+  const ScreenWithListModel({super.key});
 
   @override
   State<ScreenWithListModel> createState() => _ScreenWithListModelState();
@@ -14,7 +14,7 @@ class _ScreenWithListModelState extends State<ScreenWithListModel> {
 
   bool isReady = false;
   List<PostModel> postModel = [];
-  _getPost(){
+  void _getPost(){
     isReady = true;
     ApiServices().getPostWithModel().then((value){
       setState(() {

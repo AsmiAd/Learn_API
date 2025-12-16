@@ -3,7 +3,7 @@ import 'package:learn_api/models/single_post_with_model.dart';
 import 'package:learn_api/services/api_service.dart';
 
 class ScreenWithModel extends StatefulWidget {
-  const ScreenWithModel({Key? key}) : super(key: key);
+  const ScreenWithModel({super.key});
 
   @override
   State<ScreenWithModel> createState() => _ScreenWithModelState();
@@ -13,7 +13,7 @@ class _ScreenWithModelState extends State<ScreenWithModel> {
   bool isReady = false;
 
   SinglePostWithModel singlePostWithModel = SinglePostWithModel();
-  _getSinglePost() {
+  void _getSinglePost() {
     isReady = true;
     ApiServices().getSinglePostWithModel().then((value) {
       setState(() {

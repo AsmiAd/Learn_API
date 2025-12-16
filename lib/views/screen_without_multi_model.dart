@@ -3,7 +3,7 @@ import 'package:learn_api/services/api_service.dart';
 
 
 class ScreenWithOutMultiModel extends StatefulWidget {
-  const ScreenWithOutMultiModel({Key? key}) : super(key: key);
+  const ScreenWithOutMultiModel({super.key});
 
   @override
   State<ScreenWithOutMultiModel> createState() => _ScreenWithOutMultiModelState();
@@ -13,7 +13,7 @@ class _ScreenWithOutMultiModelState extends State<ScreenWithOutMultiModel> {
   
   bool isReady = false;
   dynamic multiData;
-  _getMultiData(){
+  void _getMultiData(){
     isReady = true;
     ApiServices().getMultiDataWithOutModel().then((value){
       setState(() {

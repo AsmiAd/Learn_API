@@ -5,7 +5,7 @@ import 'package:learn_api/views/home_screen_login.dart';
 
 
 class LoginScreenWithModel extends StatefulWidget {
-  const LoginScreenWithModel({Key? key}) : super(key: key);
+  const LoginScreenWithModel({super.key});
 
   @override
   State<LoginScreenWithModel> createState() => _LoginScreenWithModelState();

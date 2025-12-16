@@ -5,7 +5,7 @@ import 'package:learn_api/views/home_screen_login.dart';
 
 
 class LoginScreenWithoutModel extends StatefulWidget {
-  const LoginScreenWithoutModel({Key? key}) : super(key: key);
+  const LoginScreenWithoutModel({super.key});
 
   @override
   State<LoginScreenWithoutModel> createState() => _LoginScreenWithoutModelState();

@@ -4,7 +4,7 @@ import 'package:learn_api/services/api_service.dart';
 
 
 class ScreenWithMultiModel extends StatefulWidget {
-  const ScreenWithMultiModel({Key? key}) : super(key: key);
+  const ScreenWithMultiModel({super.key});
 
   @override
   State<ScreenWithMultiModel> createState() => _ScreenWithMultiModelState();
@@ -14,7 +14,7 @@ class _ScreenWithMultiModelState extends State<ScreenWithMultiModel> {
   
   MultiData multiData = MultiData();
   bool isReady = false;
-  _getMultiData(){
+  void _getMultiData(){
     isReady = true;
     ApiServices().getMultiDataWithModel().then((value){
       setState(() {

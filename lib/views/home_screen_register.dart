@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class HomeScreenRegister extends StatefulWidget {
     final String? id,token;
-  const HomeScreenRegister({Key? key, this.id, this.token}) : super(key: key);
+  const HomeScreenRegister({super.key, this.id, this.token});
 
   @override
   State<HomeScreenRegister> createState() => _HomeScreenRegisterState();

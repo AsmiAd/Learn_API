@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class SeeMyJob extends StatefulWidget {
   final String? id, name, job;
-  const SeeMyJob({Key? key, this.id, this.name, this.job}) : super(key: key);
+  const SeeMyJob({super.key, this.id, this.name, this.job});
 
   @override
   State<SeeMyJob> createState() => _SeeMyJobState();

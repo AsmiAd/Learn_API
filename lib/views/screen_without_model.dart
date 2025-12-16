@@ -3,7 +3,7 @@ import 'package:learn_api/services/api_service.dart';
 
 
 class ScreenWithoutModel extends StatefulWidget {
-  const ScreenWithoutModel({Key? key}) : super(key: key);
+  const ScreenWithoutModel({super.key});
 
   @override
   State<ScreenWithoutModel> createState() => _ScreenWithoutModelState();
@@ -15,7 +15,7 @@ class _ScreenWithoutModelState extends State<ScreenWithoutModel> {
   dynamic singlePost;
   bool isReady = false;
   
-  _getSinglePostWithoutModel(){
+  void _getSinglePostWithoutModel(){
     isReady = true;
     ApiServices().getSinglePostWithoutModel().then((value){
       setState(() {

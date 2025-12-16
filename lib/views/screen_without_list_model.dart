@@ -3,7 +3,7 @@ import 'package:learn_api/services/api_service.dart';
 
 
 class ScreenWithoutListModel extends StatefulWidget {
-  const ScreenWithoutListModel({Key? key}) : super(key: key);
+  const ScreenWithoutListModel({super.key});
 
   @override
   State<ScreenWithoutListModel> createState() => _ScreenWithOutListModelState();

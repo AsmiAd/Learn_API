@@ -7,7 +7,7 @@ import 'package:learn_api/views/see_my_job.dart';
 
 
 class HomeScreenCreateJob extends StatefulWidget {
-  const HomeScreenCreateJob({Key? key}) : super(key: key);
+  const HomeScreenCreateJob({super.key});
 
   @override
   State<HomeScreenCreateJob> createState() => _HomeScreenCreateJobState();

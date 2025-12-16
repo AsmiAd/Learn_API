@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class HomeScreenLogin extends StatefulWidget {
   final String? token;
-  const HomeScreenLogin({Key? key, this.token}) : super(key: key);
+  const HomeScreenLogin({super.key, this.token});
 
   @override
   State<HomeScreenLogin> createState() => _HomeScreenLoginState();
