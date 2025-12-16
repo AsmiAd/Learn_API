@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:learn_api/models/create_job_model.dart';
 import 'package:learn_api/services/api_service.dart';
 import 'package:learn_api/views/see_my_job.dart';
